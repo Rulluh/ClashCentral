@@ -23,6 +23,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "cashbotHQ":
     document.getElementById("sellbotLocation").hidden = true;
@@ -37,6 +38,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "lawbotHQ":
     document.getElementById("sellbotLocation").hidden = true;
@@ -51,6 +53,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "bossbotHQ":
     document.getElementById("sellbotLocation").hidden = true;
@@ -65,6 +68,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "toontownCentral":
     document.getElementById("sellbotLocation").hidden = true;
@@ -79,6 +83,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "barnacleBoatyard":
     document.getElementById("sellbotLocation").hidden = true;
@@ -93,6 +98,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "yeOldeToontowne":
     document.getElementById("sellbotLocation").hidden = true;
@@ -107,6 +113,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "daffodilGardens":
     document.getElementById("sellbotLocation").hidden = true;
@@ -121,6 +128,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "mezzoMelodyland":
     document.getElementById("sellbotLocation").hidden = true;
@@ -135,6 +143,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "brgh":
     document.getElementById("sellbotLocation").hidden = true;
@@ -149,6 +158,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = false;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "acornAcres":
     document.getElementById("sellbotLocation").hidden = true;
@@ -163,6 +173,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = false;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
     break;
     case "drowsyDreamland":
     document.getElementById("sellbotLocation").hidden = true;
@@ -177,6 +188,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = false;
+    document.getElementById("boardLocation").hidden = true;
     break;
 	case "boardLocation":
     document.getElementById("sellbotLocation").hidden = true;
@@ -191,7 +203,7 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
-	document.getElementById("boardLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = false;
     break;
     default:
     document.getElementById("sellbotLocation").hidden = true;
@@ -206,4 +218,5 @@ function subLocation() {
     document.getElementById("brghLocation").hidden = true;
     document.getElementById("acornLocation").hidden = true;
     document.getElementById("drowsyLocation").hidden = true;
+    document.getElementById("boardLocation").hidden = true;
   }
