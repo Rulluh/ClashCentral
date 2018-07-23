@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <script src="boss.js"></script>
+  <title>Toon HQ</title>
+</head>
+<body>
+  <h1>Toon HQ Rough Draft</h1>
+  <form id="entry">
+    <fieldset>
+      <legend>Location:</legend>
+      Select where your group will be meeting: <br>
+      <select name="location" id="location" onchange="subLocation();">
+        <!-- <option value="street">Cog Building</option> -->
+        <option value="sellbotHQ">Sellbot HQ</option>
+        <option value="cashbotHQ">Cashbot HQ</option>
+        <option value="lawbotHQ">Lawbot HQ</option>
+        <option value="bossbotHQ">Bossbot HQ</option>
+        <option value="toontownCentral">Toontown Central</option>
+        <option value="barnacleBoatyard">Barnacle Boatyard</option>
+        <option value="yeOldeToontowne">Ye Olde Toontown</option>
+      </select>
+      <script>
+      // would like to put this into a seperate javascript file
+      function subLocation() {
+        var location = document.getElementById("location").value;
+        // SWITCH STATEMENT THAT HIDES AND REVEALS SUBLOCATIONS FOR EACH HQ
+        switch (location) {
+          case "sellbotHQ":
+          // setting each element to true where needed so all 4 don't eventually show up
+          document.getElementById("sellbotLocation").hidden = false;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "cashbotHQ":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = false;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "lawbotHQ":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = false;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "bossbotHQ":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = false;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "toontownCentral":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = false;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "barnacleBoatyard":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = false;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "yeOldeToontowne":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = false;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "daffodilLocation":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = false;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "mezzoLocation":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = false;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "brghLocation":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = false;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "acornLocation":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = false;
+          document.getElementById("drowsyLocation").hidden = true;
+          break;
+          case "drowsyLocation":
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = false;
+          break;
+          default:
+          document.getElementById("sellbotLocation").hidden = true;
+          document.getElementById("cashbotLocation").hidden = true;
+          document.getElementById("lawbotLocation").hidden = true;
+          document.getElementById("bossbotLocation").hidden = true;
+          document.getElementById("toontownCentralLocation").hidden = true;
+          document.getElementById("barnacleBoatyardLocation").hidden = true;
+          document.getElementById("yeOldeToontowneLocation").hidden = true;
+          document.getElementById("daffodilLocation").hidden = true;
+          document.getElementById("mezzoLocation").hidden = true;
+          document.getElementById("brghLocation").hidden = true;
+          document.getElementById("acornLocation").hidden = true;
+          document.getElementById("drowsyLocation").hidden = true;
+        }
+      }
+      </script>
+      <br> <br>
+      <select name="sellbotLocation" id="sellbotLocation" hidden
+      onchange="bossGroup(document.getElementById('sellbotLocation').value);"
+      onshow="bossGroup(document.getElementById('sellbotLocation').value);">
+        <option value="shortFactory">Sellbot Factory - Short Run</option>
+        <option value="longFactory">Sellbot Factory - Long Run</option>
+        <option value="customFactory">Sellbot Factory - Custom Run</option>
+        <option value="gagTrainSell">Gag Training</option>
+        <option value="VP">Sellbot V.P.</option>
+      </select>
+      <select name="cashbotLocation" id="cashbotLocation" hidden
+      onchange="bossGroup(document.getElementById('cashbotLocation').value);"
+      onshow="bossGroup(document.getElementById('cashbotLocation').value);">
+        <option value="coin">Coin Mint</option>
+        <option value="dollar">Dollar Mint</option>
+        <option value="bullion">Bullion Mint</option>
+        <option value="gagTrainCash">Gag Training</option>
+        <option value="CFO">Cashbot C.F.O.</option>
+      </select>
+      <select name="lawbotLocation" id="lawbotLocation" hidden
+      onchange="bossGroup(document.getElementById('lawbotLocation').value);"
+      onshow="bossGroup(document.getElementById('lawbotLocation').value);">
+        <option value="aOffice">D.A. Office A</option>
+        <option value="bOffice">D.A. Office B</option>
+        <option value="cOffice">D.A. Office C</option>
+        <option value="dOffice">D.A. Office D</option>
+        <option value="gagTrainLaw">Gag Training</option>
+        <option value="CJ">Lawbot Chief Justice</option>
+      </select>
+      <select name="bossbotLocation" id="bossbotLocation" hidden
+      onchange="bossGroup(document.getElementById('bossbotLocation').value);"
+      onshow="bossGroup(document.getElementById('bossbotLocation').value)">
+        <option value="front">Front Three Golf Course</option>
+        <option value="middle">Middle Six Golf Course</option>
+        <option value="back">Back Nine Golf Course</option>
+        <option value="gagTrainBoss">Gag Training</option>
+        <option value="CEO">Bossbot C.E.O.</option>
+      </select>
+      <select name="toontownCentralLocation" id="toontownCentralLocation" hidden>
+        <option value="Derrickman">Derrick Man</option>
+        <option value="wacky">Wacky Way</option>
+        <option value="loopy">Loopy Lane</option>
+        <option value="punchline">Punchline Place</option>
+        <option value="silly">Silly Street</option>
+      </select>
+      <select name="barnacleBoatyardLocation" id="barnacleBoatyardLocation" hidden>
+        <option value="directoroflandacquisition">Director of Land Acquisition</option>
+        <option value="lighthouse">Lighthouse Lane</option>
+        <option value="buccaneer">Buccaneer Boulevard</option>
+        <option value="anchor">Anchor Avenue</option>
+        <option value="seaweed">Seaweed Street</option>
+      </select>
+      <select name="yeOldeToontowneLocation" id="yeOldeToontowneLocation" hidden>
+        <option value="directorofpublicrelations">Director of Public Relations</option>
+        <option value="knight">Knight Knoll</option>
+        <option value="wizard">Wizard Way</option>
+        <option value="noble">Noble Nook</option>
+      </select>
+      <select name="daffodilLocation" id="daffodilLocation" hidden>
+        <option value="daisy">Daisy Drive</option>
+        <option value="petunia">Petunia Place</option>
+        <option value="sunflower">Sunflower Street</option>
+        <option value="tulip">Tulip Terrace</option>
+      </select>
+      <select name="mezzoLocation" id="mezzoLocation" hidden>
+        <option value="alto">Alto Avenue</option>
+        <option value="baritone">Baritone Boulevard</option>
+        <option value="soprano">Soprano Street</option>
+        <option value="tenor">Tenor Terrace</option>
+      </select>
+      <select name="brghLocation" id="brghLocation" hidden>
+        <option value="sleet">Sleet Street</option>
+        <option value="walrus">Walrus Way</option>
+        <option value="polar">Polar Place</option>
+        <option value="arctic">Arctic Avenue</option>
+      </select>
+      <select name="acornLocation" id="acornLocation" hidden>
+        <option value="peanut">Peanut Place</option>
+        <option value="legume">Legume Lane</option>
+        <option value="walnut">Walnut Way</option>
+        <option value="avenue">Acorn Avenue</option>
+      </select>
+      <select name="drowsyLocation" id="drowsyLocation" hidden>
+        <option value="lullaby">Lullaby Lane</option>
+        <option value="pajama">Pajama Place</option>
+        <option value="twilight">Twilight Terrace</option>
+      </select>
+
+      </select>
+      <br> <br>
+      Select the District your group will meet up in: <br>
+      <select name="district" id="district">
+        <option value="bamboozle">Bamboozle Bay</option>
+        <option value="boulder">Boulderbury</option>
+        <option value="bugle">Bugle Bay</option>
+        <option value="comical">Comical Canyon</option>
+        <option value="feather">Feather Field</option>
+        <option value="foghorn">Foghorn Falls</option>
+        <option value="geyser">Geyser gulch</option>
+        <option value="high-dive">High-Dive Hills</option>
+        <option value="hypno">Hypno Hatbor</option>
+        <option value="jellybean">Jellybean Junction</option>
+        <option value="jolly">Jollywood</option>
+        <option value="kazoo">Kazoo Kanyon</option>
+        <option value="lazy">Lazy Lagoom</option>
+        <option value="marble">Marble Mountains</option>
+        <option value="opera">Opera Oasis</option>
+        <option value="piano">Piano Peaks</option>
+        <option value="quicksand">Quicksand Quarry</option>
+        <option value="rake">Rake River</option>
+        <option value="seltzer">Seltzer Summit</option>
+        <option value="splat">Splatville</option>
+        <option value="whistle">Whistle Woods</option>
+      </select> <br>
+    </fieldset>
+    <!-- Place for cog building code -->
+    <br> <br>
+    <fieldset>
+      <legend>Group Size:</legend>
+      How many people do you need? <br>
+      <select name="groupSize" id="groupSize">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" id="bossNumber1" hidden>4</option>
+        <option value="5" id="bossNumber2" hidden>5</option>
+        <option value="6" id="bossNumber3" hidden>6</option>
+        <option value="7" id="bossNumber4" hidden>7</option>
+      </select>
+    </fieldset>
+    <br> <br>
+    <fieldset>
+      <legend>Toon Information:</legend>
+      Enter your Toon name: <br>
+      <input type="text" id="toonName"> <br>
+      Select your Toon Species: <br>
+      <select name="toonSpecies" id="toonSpecies">
+        <option value="alligator">Alligator</option>
+        <option value="bat">Bat</option>
+        <option value="bear">Bear</option>
+        <option value="beaver">Beaver</option>
+        <option value="cat">Cat</option>
+        <option value="deer">Deer</option>
+        <option value="dog">Dog</option>
+        <option value="duck">Duck</option>
+        <option value="fox">Fox</option>
+        <option value="horse">Horse</option>
+        <option value="monkey">Monkey</option>
+        <option value="mouse">Mouse</option>
+        <option value="pig">Pig</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="raccoon">Raccoon</option>
+      </select> <br>
+      Enter your Toon Color: <br>
+      <input type="text" id="toonColor"> <br>
+    </fieldset>
+    <br>
+  </form>
+
+  <button onclick="createHQEntry();">Submit</button>
+    <!-- Submit button does not work at the moment -->
+
+  <button type="button" name="button" onclick="location.href='https://goo.gl/forms/ejLIG8DFA42CPsk83'">Suggestions</button>
+
+
+</body>
+</html>
