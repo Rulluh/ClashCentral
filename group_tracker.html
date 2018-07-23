@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="group_tracker_styles.css">
+  <script src="boss.js"></script>
+  <script src="location.js"></script>
+  <script src="building.js"></script>
+  <title>Clash Central Group Tracker</title>
+</head>
+<body>
+  <img src="clash_central_logo.png" id="logo">
+  <form id="entry">
+    <fieldset>
+      <legend>Location:</legend>
+      Select where your group will be meeting: <br>
+      <select name="location" id="location" onchange="subLocation();">
+        <option value="toontownCentral">Toontown Central</option>
+        <option value="barnacleBoatyard">Barnacle Boatyard</option>
+        <option value="yeOldeToontowne">Ye Olde Toontown</option>
+        <option value="daffodilGardens">Daffodil Gardens</option>
+        <option value="mezzoMelodyland">Mezzo Melodyland</option>
+        <option value="brgh">The Brrrgh</option>
+        <option value="acornAcres">Acorn Acres</option>
+        <option value="drowsyDreamland">Drowsy Dreamland</option>
+        <option value="sellbotHQ">Sellbot HQ</option>
+        <option value="cashbotHQ">Cashbot HQ</option>
+        <option value="lawbotHQ">Lawbot HQ</option>
+        <option value="bossbotHQ">Bossbot HQ</option>
+      </select>
+      <br> <br>
+      <select name="sellbotLocation" id="sellbotLocation" hidden
+      onchange="bossGroup(document.getElementById('sellbotLocation').value);">
+        <option value="shortFactory" selected>Sellbot Factory - Short Run</option>
+        <option value="longFactory">Sellbot Factory - Long Run</option>
+        <option value="customFactory">Sellbot Factory - Custom Run</option>
+        <option value="gagTrainSell">Gag Training</option>
+        <option value="VP">Sellbot V.P.</option>
+      </select>
+      <select name="cashbotLocation" id="cashbotLocation" hidden
+      onchange="bossGroup(document.getElementById('cashbotLocation').value);">
+        <option value="coin" selected>Coin Mint</option>
+        <option value="dollar">Dollar Mint</option>
+        <option value="bullion">Bullion Mint</option>
+        <option value="gagTrainCash">Gag Training</option>
+        <option value="CFO">Cashbot C.F.O.</option>
+      </select>
+      <select name="lawbotLocation" id="lawbotLocation" hidden
+      onchange="bossGroup(document.getElementById('lawbotLocation').value);">
+        <option value="aOffice" selected>D.A. Office A</option>
+        <option value="bOffice">D.A. Office B</option>
+        <option value="cOffice">D.A. Office C</option>
+        <option value="dOffice">D.A. Office D</option>
+        <option value="gagTrainLaw">Gag Training</option>
+        <option value="CJ">Lawbot Chief Justice</option>
+      </select>
+      <select name="bossbotLocation" id="bossbotLocation" hidden
+      onchange="bossGroup(document.getElementById('bossbotLocation').value);">
+        <option value="front" selected>Front Three Golf Course</option>
+        <option value="middle">Middle Six Golf Course</option>
+        <option value="back">Back Nine Golf Course</option>
+        <option value="gagTrainBoss">Gag Training</option>
+        <option value="CEO">Bossbot C.E.O.</option>
+      </select>
+      <select name="toontownCentralLocation" id="toontownCentralLocation" hidden
+      onchange="cogBuilding();">
+        <option value="wacky" selected>Wacky Way</option>
+        <option value="loopy">Loopy Lane</option>
+        <option value="punchline">Punchline Place</option>
+        <option value="silly">Silly Street</option>
+        <option value="Derrickman">Derrick Man</option>
+      </select>
+      <select name="barnacleBoatyardLocation" id="barnacleBoatyardLocation" hidden
+      onchange="cogBuilding();">
+        <option value="lighthouse" selected>Lighthouse Lane</option>
+        <option value="buccaneer">Buccaneer Boulevard</option>
+        <option value="anchor">Anchor Avenue</option>
+        <option value="directoroflandacquisition">Director of Land Acquisition</option>
+      </select>
+      <select name="yeOldeToontowneLocation" id="yeOldeToontowneLocation" hidden
+      onchange="cogBuilding();">
+        <option value="knight" selected>Knight Knoll</option>
+        <option value="wizard">Wizard Way</option>
+        <option value="noble">Noble Nook</option>
+        <option value="directorofpublicrelations">Director of Public Relations</option>
+      </select>
+      <select name="daffodilLocation" id="daffodilLocation" hidden
+      onchange="cogBuilding();">
+        <option value="daisy" selected>Daisy Drive</option>
+        <option value="petunia">Petunia Place</option>
+        <option value="sunflower">Sunflower Street</option>
+        <option value="tulip">Tulip Terrace</option>
+      </select>
+      <select name="mezzoLocation" id="mezzoLocation" hidden
+      onchange="cogBuilding();">
+        <option value="alto" selected>Alto Avenue</option>
+        <option value="baritone">Baritone Boulevard</option>
+        <option value="soprano">Soprano Street</option>
+        <option value="tenor">Tenor Terrace</option>
+      </select>
+      <select name="brghLocation" id="brghLocation" hidden
+      onchange="cogBuilding();">
+        <option value="sleet" selected>Sleet Street</option>
+        <option value="walrus">Walrus Way</option>
+        <option value="polar">Polar Place</option>
+        <option value="arctic">Arctic Avenue</option>
+      </select>
+      <select name="acornLocation" id="acornLocation" hidden
+      onchange="cogBuilding();">
+        <option value="peanut" selected>Peanut Place</option>
+        <option value="legume">Legume Lane</option>
+        <option value="walnut">Walnut Way</option>
+        <option value="avenue">Acorn Avenue</option>
+      </select>
+      <select name="drowsyLocation" id="drowsyLocation" hidden
+      onchange="cogBuilding();">
+        <option value="lullaby" selected>Lullaby Lane</option>
+        <option value="pajama">Pajama Place</option>
+        <option value="twilight">Twilight Terrace</option>
+      </select>
+      <br> <br>
+
+      <select name="buildingFloors" id="buildingFloors" hidden>
+        <option value="1">1 Story</option>
+        <option value="2">2 Story</option>
+        <option value="3">3 Story</option>
+        <option value="4">4 Story</option>
+        <option value="5">5 Story</option>
+        <option value="6">6 Story</option>
+      </select>
+      <!--PLEASE DO NOT ADD A <br> ELEMENT HERE-->
+      <select name="cogBuildingType" id="cogBuildingType" hidden>
+        <option value="sell">Sellbot</option>
+        <option value="cash">Cashbot</option>
+        <option value="law">Lawbot</option>
+        <option value="boss">Bossbot</option>
+        <option value="board">Boardbot</option>
+      </select>
+
+      <br> <br>
+      Select the District your group will meet up in: <br>
+      <select name="district" id="district">
+        <option value="bamboozle">Bamboozle Bay</option>
+        <option value="boulder">Boulderbury</option>
+        <option value="bugle">Bugle Bay</option>
+        <option value="comical">Comical Canyon</option>
+        <option value="feather">Feather Field</option>
+        <option value="foghorn">Foghorn Falls</option>
+        <option value="geyser">Geyser Gulch</option>
+        <option value="high-dive">High-Dive Hills</option>
+        <option value="hypno">Hypno Hatbor</option>
+        <option value="jellybean">Jellybean Junction</option>
+        <option value="jolly">Jollywood</option>
+        <option value="kazoo">Kazoo Kanyon</option>
+        <option value="lazy">Lazy Lagoom</option>
+        <option value="marble">Marble Mountains</option>
+        <option value="opera">Opera Oasis</option>
+        <option value="piano">Piano Peaks</option>
+        <option value="quicksand">Quicksand Quarry</option>
+        <option value="rake">Rake River</option>
+        <option value="seltzer">Seltzer Summit</option>
+        <option value="splat">Splatville</option>
+        <option value="whistle">Whistle Woods</option>
+      </select> <br>
+    </fieldset>
+    <!-- Place for cog building code -->
+    <br> <br>
+    <fieldset>
+      <legend>Group Size:</legend>
+      How many people do you need? <br>
+      <select name="groupSize" id="groupSize">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" id="bossNumber1" hidden>4</option>
+        <option value="5" id="bossNumber2" hidden>5</option>
+        <option value="6" id="bossNumber3" hidden>6</option>
+        <option value="7" id="bossNumber4" hidden>7</option>
+      </select>
+    </fieldset>
+    <br> <br>
+    <fieldset>
+      <legend>Toon Information:</legend>
+      Enter your Toon name: <br>
+      <input type="text" id="toonName"> <br>
+      Select your Toon Species: <br>
+      <select name="toonSpecies" id="toonSpecies">
+        <option value="alligator">Alligator</option>
+        <option value="bat">Bat</option>
+        <option value="bear">Bear</option>
+        <option value="beaver">Beaver</option>
+        <option value="cat">Cat</option>
+        <option value="deer">Deer</option>
+        <option value="dog">Dog</option>
+        <option value="duck">Duck</option>
+        <option value="fox">Fox</option>
+        <option value="horse">Horse</option>
+        <option value="monkey">Monkey</option>
+        <option value="mouse">Mouse</option>
+        <option value="pig">Pig</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="raccoon">Raccoon</option>
+      </select> <br>
+      Enter your Toon Color: <br>
+      <input type="text" id="toonColor"> <br>
+    </fieldset>
+    <br>
+  </form>
+
+  <button onclick="createHQEntry();">Submit</button>
+    <!-- Submit button does not work at the moment -->
+
+  <button type="button" name="suggestions" onclick="location.href='https://goo.gl/forms/ejLIG8DFA42CPsk83'">Suggestions</button>
+  <button type="button" name="application" onclick="location.href='https://clashcentralstaff.typeform.com/to/OnoU8X'">Apply For The Team!</button>
+  <button type="button" name="discord" onclick="location.href='https://discord.gg/uKAPeS2'">Join for Progress Updates</button>
+  <button type="button" name="support" onclick="location.href='mailto:support@clashcentral.net'">Email our Team</button>
+
+</body>
+</html>
